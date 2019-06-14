@@ -25,4 +25,4 @@ def load_test_data(test_file_path, test_label_file_path, is_df=True):
         return pd.concat([data_frame, label_frame.iloc[:, 1:]], 1)
 
     # test_ids, test_texts, test_labels (6 columns)
-    return data_frame['id'].tolist(), data_frame['comment_text'].tolist(), data_frame.iloc[:, 1:].as_matrix()
+    return data_frame['id'].tolist(), data_frame['comment_text'].tolist(), label_frame.iloc[:, 1:].as_matrix()
